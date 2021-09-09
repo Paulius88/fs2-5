@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>  
+</head>
+<body>
+	<form>
+		<fieldset>
+			<legend>Pasirinkite mygtuką</legend>
+			<input type="checkbox" name="checkbox"> 
+			<input type="checkbox" name="checkbox" checked> 
+			<input type="checkbox" name="checkbox"> 
+			<input type="text" name="radio1" placeholder="Jūsų vardas..."> 
+		</fieldset>
+		<fieldset>
+			<legend>Pasirinkite kitą mygtuką</legend>
+
+			<input type="radio" name="cities"> Vln
+			<input type="radio" name="cities"> Kns
+			<input type="radio" name="cities" checked> Klp
+
+			<input type="radio" name="shops"> Maxima
+			<input type="radio" name="shops"> Norfa
+			<!-- shop closed -->
+			<input type="radio" name="shops" disabled> IKI
+			
+		</fieldset>
+		<button>Siųsti į serverį</button>
+	</form>
+</body>
+</html>
