@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.table {
+			width: 500px;
+			border-collapse: collapse;
+		}
+
+		.table td,
+		.table th {
+			border: 1px solid #ccc;
+			padding: 5px 10px;
+		}
+
+		.table thead {
+			background-color: #f0f1f4;
+		}
+
+		.table tfoot {
+			background-color: #121212;
+			color: #fff;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>№</th>
+				<th>Vardas</th>
+				<th>E-mail</th>
+				<th>Lytis</th>
+				<th>Data</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>Antanas</td>
+				<td>antanas@mail.com</td>
+				<td>V</td>
+				<td>21.11.2020</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Mantas</td>
+				<td>mantas@mail.com</td>
+				<td>V</td>
+				<td>23.11.2020</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Viktorija</td>
+				<td>viktorija@mail.com</td>
+				<td>M</td>
+				<td>24.11.2020</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5">Viso: 3</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>
