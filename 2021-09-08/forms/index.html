@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.group {
+			border: 1px solid red;
+			margin-bottom: 5px;
+			padding:  5px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<!-- div>div*5>input[type="checkbox" value="$"]+{$} -->
+		<div class="group">
+			<div><input type="checkbox" name="checkbox-test" value="1" checked>1</div>
+			<div><input type="checkbox" name="checkbox-test" value="2" checked="checked">2</div>
+			<div><input type="checkbox" name="checkbox-test" value="3" checked>3</div>
+			<div><input type="checkbox" name="checkbox-test" value="4">4</div>
+			<div><input type="checkbox" name="checkbox-test" value="5" disabled="disabled">5</div>
+		</div>
+
+		<div class="group">
+			<div><input type="radio" value="1">1</div>
+			<div><input type="radio" value="2">2</div>
+			<div><input type="radio" value="3">3</div>
+			<div><input type="radio" value="4">4</div>
+			<div><input type="radio" value="5">5</div>
+		</div>
+		
+		<div class="group">
+			<div><input type="radio" name="radio-test" value="1">1</div>
+			<div><input type="radio" name="radio-test" value="2">2</div>
+			<div><input type="radio" name="radio-test" value="3" checked>3</div>
+			<div><input type="radio" name="radio-test" value="4" disabled>4</div>
+			<div><input type="radio" name="radio-test" value="5">5</div>
+		</div>
+
+		<div class="group">
+			<input type="number" max="100" min="5" step="5">
+		</div>
+
+		<div class="group">
+			<input type="text" maxlength="15" value="aaaa">
+		</div>
+
+		<div class="group">
+			<input type="text" pattern="\w{5}">
+		</div>
+
+		<div class="group">
+			<select>
+				<option selected disabled>Please select value</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+
+		<div class="group">
+			<select multiple>
+				<option selected disabled>Please select multiple values</option>
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select>
+		</div>
+
+		<div class="group">
+			<textarea cols="30" rows="10">
+				aaaaa
+			</textarea>
+		</div>
+
+		<fieldset>
+			<legend>Personalia:</legend>
+			<label for="fname">First name:</label>
+			<input type="text" id="fname" name="fname"><br><br>
+			<label for="lname">Last name:</label>
+			<input type="text" id="lname" name="lname"><br><br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"><br><br>
+			<label for="birthday">Birthday:</label>
+			<input type="date" id="birthday" name="birthday"><br><br>
+		</fieldset>
+
+		<div class="group">
+			<label for="browser">Choose your browser from the list:</label>
+			<input list="browsers" name="browser" id="browser">
+
+			<datalist id="browsers">
+				<option value="Edge">
+				<option value="Firefox">
+				<option value="Chrome">
+				<option value="Opera">
+				<option value="Safari">
+			</datalist>
+		</div>
+
+		<button>send</button>
+	</form>
+</body>
+</html>
