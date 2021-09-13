@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			height: 100px;
+			width: 100px;
+			background-color: red;
+			border: 1px solid black;
+			margin-bottom: 5px;
+		}
+
+		/*div:not(p) {
+			background-color: #EA08D6;
+		}*/
+
+		.background-blue {
+			background-color: blue;
+		}
+
+		#background-orange {
+			background-color: orange;
+		}
+
+		.border-red-dashed {
+			border: 5px dashed red;
+		}
+
+		[data-id] {
+			background-color: green;
+		}
+
+		[data-id="6"] {
+			background-color: #DAF7A6;
+		}
+
+		input:checked {
+			height: 50px;
+			width: 50px;
+		}
+
+		/* main  */
+		#div-4 {
+			background-color: #08EA75;
+			width: 200px;
+			height: 100%;
+			padding: 5px;
+		}
+
+		/* 1 lvl  */
+		#div-4 > div {
+			background-color: #A0EA08;
+			width: 150px;
+			height: 150px;
+			/*padding: 5px;*/
+		}
+
+		/* 2 lvl */
+		#div-4 > div > div,
+		#div-4 > div > section {
+			background-color: #5B6743;
+			width: 130px;
+			height: 130px;
+			/*padding: 5px;*/
+		}
+
+		/* 3 lvl */
+		#div-4 > div > div > div {
+			background-color: #3E5410;
+			width: 120px;
+			height: 120px;
+			/*padding: 5px;*/
+		}
+
+		#div-4 div {
+			padding: 5px;
+		}
+
+		div:nth-child(10):hover {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div>1</div>
+	<div class="background-blue">2</div>
+	<div id="background-orange">3</div>
+	<div class="background-blue border-red-dashed">4</div>
+	<div data-id="5">5</div>
+	<div data-id="6">6</div>
+	<div data-id="7">7</div>
+	<p data-id="p">p</p>
+	<div>
+		<p data-id="p">p</p>
+	</div>
+	<div>9</div>
+	<div>10</div>
+
+	<input type="checkbox">
+
+	<div id="div-4">
+		<div>
+			<div>
+				<div></div>
+			</div>
+		</div>
+		<!--  -->
+		<div>
+			<section></section>
+		</div>
+		<!--  -->
+		<div>
+			<div>
+				<div></div>
+			</div>
+		</div>
+		<div></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+div	{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	margin-right: 5px;
+	background: red;
+}
+
+#div-1 {
+	background-color: hotpink;
+}
+
+#div-1 {
+	background-color: gold;
+}
+
+#div-2 {
+	background: khaki;
+}

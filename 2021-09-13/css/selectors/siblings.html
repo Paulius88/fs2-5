@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.a ~ .b {
+			background-color: powderblue;
+		}
+
+		div, p {
+			width: 100px;
+			height: 100px;
+
+			background-color: red;
+			margin-bottom: 5px;
+		}
+
+		p {
+			background-color: orange;
+		}
+
+		body > :nth-child(3) ~ div {
+			background-color: green;
+		}
+
+		/*body > :nth-child(3) ~ * {
+			background-color: green;
+		}*/
+	</style>
+</head>
+<body>
+	<ul>
+		<li class="b">1st</li>
+		<li class="a">2nd</li>
+		<li>3rd</li>
+		<li class="b">4th</li>
+		<li class="b">5th</li>
+	</ul>
+
+	<div>div</div>
+	<div>div</div>
+	<p>p</p>
+	<div>div</div>
+	<p>p</p>
+	<div>div</div>
+	<div>div</div>
+</body>
+</html>
