@@ -18,28 +18,28 @@ section.one > div {
 	background-color: orange;
 
 	height: 30px;
-	/*height: 5vh;*/
+	height: 5vh;
 }
 
 section.two > div {
 	background-color: olivedrab;
 
 	height: 50px;
-	/*height: 10vh;*/
+	height: 10vh;
 }
 
 section.three > div {
 	background-color: blue;
 
 	height: 100px;
-	/*height: 20vh;*/
+	height: 20vh;
 }
 
 section.four > div {
 	background-color: #ccc;
 
 	height: 30px;
-	/*height: 3vh;*/
+	height: 3vh;
 }
 
 @media only screen and (min-width: 768px) {
@@ -64,8 +64,7 @@ section.four > div {
 		display: block;
 	}
 
-	section.three,
-	section.four {
+	section.three {
 		flex-direction: row;
 	}
 
