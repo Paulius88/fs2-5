@@ -17,21 +17,21 @@ section > div {
 section.one > div {
 	background-color: orange;
 
-	height: 30px;
+	/*height: 30px;*/
 	height: 5vh;
 }
 
 section.two > div {
 	background-color: olivedrab;
 
-	height: 50px;
+	/*height: 50px;*/
 	height: 10vh;
 }
 
 section.three > div {
 	background-color: blue;
 
-	height: 100px;
+	/*height: 100px;*/
 	height: 20vh;
 }
 
