@@ -1,0 +1,95 @@
+/* 
+-- Menu font-family: Lato, sans-serif;
+-- Menu font color: #151515
+-- Menu button background-color: #b6b6b6
+*/
+
+body {
+	color: #151515;
+	font-family: Lato, sans-serif;
+}
+
+a {
+	color: #151515;
+	text-decoration: none;
+}
+
+nav {
+	overflow: hidden;
+}
+
+nav header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+nav .collapsible {
+	display: none;
+}
+
+nav .btn-group a {
+	text-transform: uppercase;
+	padding: 10px 24px 10px;
+	cursor: pointer;
+	width: 100%;
+	display: block;
+}
+
+nav button.book {
+	background-color: #ccc;
+	color: #fff;
+	width: 100%;
+	padding: 10px 24px 10px;
+	border: 0;
+}
+
+
+div.images {
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+
+	justify-content: space-between;
+}
+
+div.images > div.image {
+	height: 35vh;
+
+	flex: 1 0 33%;
+	text-align: center;
+
+	margin: 5px;
+}
+
+div.images > div.image > img {
+	height: 100%;
+	width: 100%;
+
+	object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+	#toggle-menu {
+		display: none;
+	}
+
+	nav .collapsible {
+		display: block;
+	}
+
+	nav, nav div#nav, nav .btn-group {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	div.images > div.image {
+		flex-basis: 25%;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	div.images > div.image {
+		flex-basis: 15%;
+	}
+}
