@@ -1,0 +1,19 @@
+.custom-search {
+    position: relative;
+}
+
+.custom-search input {
+    text-align: right;
+}
+
+.custom-search input:focus {
+    box-shadow: none;
+    border: 1px solid blue;
+}
+
+.custom-search .fa-search {
+    position: absolute;
+
+    top: 11px;
+    left: 16px;
+}
