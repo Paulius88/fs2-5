@@ -1,2 +1,4 @@
 test.html
-/students
+students
+docker-compose.yml
+node_modules
