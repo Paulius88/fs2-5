@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"main": "app.js",
 	"scripts": {
+		"kiril": "ls",
 		"dev": "npm run development",
 		"development": "mix",
 		"watch": "mix watch",
