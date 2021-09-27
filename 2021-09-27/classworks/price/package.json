@@ -1,0 +1,33 @@
+{
+	"name": "sass-test",
+	"version": "0.0.1",
+	"main": "app.js",
+	"scripts": {
+		"dev": "npm run development",
+		"development": "mix",
+		"watch": "mix watch",
+		"watch-poll": "mix watch -- --watch-options-poll=1000",
+		"hot": "mix watch --hot",
+		"prod": "npm run production",
+		"production": "mix --production"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nonamez/fs2-5.git"
+	},
+	"author": "hello@nonamez.name",
+	"license": "Beerware",
+	"bugs": {
+		"url": "https://github.com/nonamez/fs2-5/issues"
+	},
+	"homepage": "https://github.com/nonamez/fs2-5#readme",
+	"dependencies": {
+		"bootstrap": "^5.1.1",
+		"laravel-mix": "^6.0.6"
+	},
+	"devDependencies": {
+		"resolve-url-loader": "^4.0.0",
+		"sass": "^1.42.1",
+		"sass-loader": "^12.1.0"
+	}
+}
