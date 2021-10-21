@@ -22,5 +22,15 @@ for (let img of fakeImagesOfRighColumn) {
 // 	i++
 // }
 
-
 document.querySelector('#about-me-img').style.backgroundColor = 'purple';
+
+document.querySelector('[name="comment"]').style = 'border: 5px solid yellow';
+document.querySelector('body [name]').style = 'border: 5px solid green';
+
+setTimeout(() => {
+	let elementsWithNameAttribute = document.querySelectorAll('body [name]');
+
+	for (let el of elementsWithNameAttribute) {
+		el.style = 'border: 5px solid orange';
+	}
+}, 5 * 1000);
