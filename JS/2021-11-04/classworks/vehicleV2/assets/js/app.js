@@ -25,9 +25,9 @@ let vehicles = [
 
 let customCar = new Car('Rezvani', 'Hercules', 2019);
 
-customCar.wheels = 6;
+// customCar.wheels = 6;
 
-// customCar.setWheelsNumber(6);
+customCar.setWheelsNumber(6);
 
 vehicles.unshift(customCar);
 
