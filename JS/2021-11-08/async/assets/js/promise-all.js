@@ -28,9 +28,9 @@ function createUser(name, surname, email, time) {
 }
 
 let data = [
-	['K', 'C', 'hello@nonamez.mame'],
-	['A', 'V', 'av@nonamez.mame'],
-	['V', 'D', 'kd@nonamez.mame'],
+	['A', 'C', 'ac@nonamez.mame'],
+	['B', 'V', 'bv@nonamez.mame'],
+	['C', 'D', 'cd@nonamez.mame'],
 ];
 
 const div = document.querySelector('div');

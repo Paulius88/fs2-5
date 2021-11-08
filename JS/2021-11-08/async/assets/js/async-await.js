@@ -6,6 +6,7 @@ const networkRequest = ({name, surname, email}, resolveFromPromise, rejectFromPr
 
 		const user = {name, surname, email};
 
+		// resolveFromPromise(user);
 		// rejectFromPromise(new Error('Server temporarily not available'));
 
 		if (Math.random() < 0.5) {
@@ -31,49 +32,22 @@ function createUser(name, surname, email) {
 	});
 }
 
-let data = [
-	['A', 'C', 'ac@nonamez.mame'],
-	['B', 'V', 'bv@nonamez.mame'],
-	['C', 'D', 'cd@nonamez.mame'],
-];
-
-const div = document.querySelector('div');
-
-setTimeout(function() {
-	document.querySelector('div').setAttribute('v-cloak', '');
+(async function() {
+	let data = [
+		['A', 'C', 'ac@nonamez.mame'],
+		['B', 'V', 'bv@nonamez.mame'],
+		['C', 'D', 'cd@nonamez.mame'],
+	];
 
 	for (let d of data) {
-		let u = createUser(...d);
+		let u = null;
 
-		console.log({stte: u});
+		try {
+			u = await createUser(...d);
+		} catch(err) {
+			console.error(err.message);
+		}
 
-		setTimeout(function() {
-			console.log(d, {stte: u});
-
-			u.then(function(result) {
-				console.log({result});
-
-
-			}).catch(function(err) {
-				console.error(err);
-			}).then(function() { // finally
-				document.querySelector('div').removeAttribute('v-cloak');
-			});
-
-			console.log('after then');
-			
-			// u.then(function(result) {
-			// 	console.log({result});
-			// }, function(err) {
-			// 	console.error(err);
-			// });
-		}, 6000);
-
-		// createUser(...user).then(function(result) {
-		// 	console.log(result);
-
-		// }).catch(function(err) {
-		// 	console.error(err);
-		// });
+		console.log('afterAwait', u);
 	}
-}, 3000);
+})();
