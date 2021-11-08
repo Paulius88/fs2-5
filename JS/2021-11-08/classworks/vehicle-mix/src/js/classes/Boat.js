@@ -10,4 +10,8 @@ export default class Boat extends Vehicle {
 	getType() {
 		return 'Cruiser';
 	}
+
+	getFuelType() {
+		return [2];
+	}
 }

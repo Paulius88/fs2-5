@@ -6,4 +6,8 @@ export default class Car extends Vehicle {
 
 		this.wheels = 4;
 	}
+
+	getFuelType() {
+		return [1,2];
+	}
 }

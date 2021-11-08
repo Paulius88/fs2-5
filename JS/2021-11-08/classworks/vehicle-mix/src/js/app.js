@@ -16,12 +16,12 @@ let vehicles = [
 
 	new Bmw('X3', 2012),
 	
-	{
-		make: 'Audi',
-		model: 'S3',
-		year: 2020,
-		wheels: 4
-	},
+	// {
+	// 	make: 'Audi',
+	// 	model: 'S3',
+	// 	year: 2020,
+	// 	wheels: 4
+	// },
 
 	new Motorcycle('Aprilia', 'RS', 2020, 2),
 
@@ -44,6 +44,7 @@ vehicles.unshift(customCar);
 
 for (let v of vehicles) {
 	console.log(v);
+	console.log(v.getFuelType());
 
 	if (v instanceof Vehicle) {
 		console.log('getIntroduction ==> ', v.getIntroduction());

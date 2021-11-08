@@ -6,4 +6,8 @@ export default class Motorcycle extends Vehicle {
 
 		this.wheels = wheels;
 	}
+
+	getFuelType() {
+		return [1,2];
+	}
 }

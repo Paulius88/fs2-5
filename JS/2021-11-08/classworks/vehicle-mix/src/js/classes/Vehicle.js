@@ -32,4 +32,8 @@ export default class Vehicle {
 	getWheelsNumberText() {
 		return `${this.constructor.name} has ${this.getWheelsNumber()} wheels`;
 	}
+
+	getFuelType() {
+		throw new Error('Fuel type not found');
+	}
 }

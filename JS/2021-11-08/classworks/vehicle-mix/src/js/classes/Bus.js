@@ -6,4 +6,8 @@ export default class Bus extends Vehicle {
 
 		this.wheels = wheels;
 	}
+
+	getFuelType() {
+		return [2, 3];
+	}
 }
