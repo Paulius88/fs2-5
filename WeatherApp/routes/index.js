@@ -1,6 +1,6 @@
-let express = require('express');
+const express = require('express');
 
-let router = express.Router();
+const router = express.Router();
 
 router.get('/', function(req, res, next) {
 	res.render('index');

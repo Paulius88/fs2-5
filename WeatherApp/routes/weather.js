@@ -1,12 +1,16 @@
-let express = require('express');
-let router = express.Router();
+const MeteoApi = require('../services/MeteoApi');
 
-router.get('/', function(req, res, next) {
-	res.send('respond with a resource');
-});
+const express = require('express');
+const router = express.Router();
 
-router.get('/places', function(req, res, next) {
-	res.send('respond with a "places" resource');
+router.get('/places/find/:name', function(req, res, next) {
+	MeteoApi.getPlaces().then(places => {
+		places = places.filter(p => p.name.toLowerCase().startsWith(req.params.name.toLowerCase()));
+
+		places = places.slice(0, 10);
+
+		res.json(places);
+	});
 });
 
 module.exports = router;
