@@ -14,6 +14,7 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+app.set('ip', '192.168.88.116');
 
 /**
  * Create HTTP server.
@@ -25,7 +26,7 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port, () => {
+server.listen(port, '192.168.88.116', () => {
   console.log(`Weather app statred at http://localhost:${port}`)
 });
 server.on('error', onError);
