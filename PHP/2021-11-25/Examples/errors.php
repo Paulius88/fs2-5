@@ -4,7 +4,7 @@
 
 $a = $b;
 
-$a = $b
+// $a = $b
 
 var_dump($a);
 
