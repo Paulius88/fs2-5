@@ -16,4 +16,4 @@ $speed = 80;
 
 <h1>Greičio viršijimas!</h1>
 
-<?php endif ?>
+<?php endif; ?>
