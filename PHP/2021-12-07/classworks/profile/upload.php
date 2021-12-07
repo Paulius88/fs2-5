@@ -1,7 +1,6 @@
 <?php
 
 define('UPLOAD_DIR', dirname(__FILE__) . '/uploads');
-// define('UPLOAD_DIR', '/home/code-academy/uploads');
 define('ALLOWED_EXTENSION', ['png', 'jpg', 'jpeg', 'pdf']);
 
 function generateRandomString($length = 10) {
@@ -14,7 +13,11 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-foreach ($_FILES as $key =>  $file) {
+$profilePicture = 'https://www.gravatar.com/avatar/' . md5(generateRandomString(16));
+
+if (isset($_FILES['photo'])) {
+	$file = $_FILES['photo'];
+
 	if ($file['error'] == UPLOAD_ERR_OK) {
 		$ext = pathinfo($file['name'], PATHINFO_EXTENSION);
 		$ext = strtolower($ext);
@@ -36,5 +39,7 @@ foreach ($_FILES as $key =>  $file) {
 		$path = sprintf('%s/%s.%s', $path, $name, $ext);
 
 		move_uploaded_file($file['tmp_name'], $path);
+
+		$profilePicture = str_replace('/home/code-academy/PHP', '', $path);
 	}
 }
