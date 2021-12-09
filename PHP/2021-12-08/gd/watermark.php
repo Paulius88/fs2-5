@@ -10,14 +10,9 @@ $marge_bottom = 10;
 $sx = imagesx($stamp);
 $sy = imagesy($stamp);
 
-// var_dump(imagesx($stamp), imagesy($stamp));
-
-// exit;
-
 // Copy the stamp image onto our photo using the margin offsets and the photo 
 // width to calculate positioning of the stamp. 
 imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
-// 
 
 // Allocate A Color For The Text
 $red = imagecolorallocate($im, 255, 0, 0);
