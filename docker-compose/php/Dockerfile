@@ -10,6 +10,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd 
 
+COPY ./conf/* /usr/local/etc/php/conf.d
+
 RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && \
     echo 'lt_LT.UTF-8 UTF-8' >> /etc/locale.gen  && \
     echo 'lv_LV.UTF-8 UTF-8' >> /etc/locale.gen  && \

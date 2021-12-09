@@ -20,5 +20,4 @@ services:
         # tty: true
         volumes: 
             - ./PHP:/home/code-academy/PHP
-            - ./docker-compose/php/conf:/usr/local/etc/php/conf.d
             - ./docker-compose/logs/php-fpm:/var/log/php-fpm
