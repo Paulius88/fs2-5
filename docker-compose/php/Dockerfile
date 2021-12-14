@@ -5,11 +5,16 @@ RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
         libpng-dev \
-    && pecl install xdebug && docker-php-ext-enable xdebug \
+        libmagickwand-dev --no-install-recommends \
+        ghostscript
+
+RUN pecl install imagick-3.6.0 && docker-php-ext-enable imagick \
+    # && pecl install xdebug && docker-php-ext-enable xdebug \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd 
 
 COPY ./conf/* /usr/local/etc/php/conf.d
+COPY ./image-magick /etc/ImageMagick-6
 
 RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && \
     echo 'lt_LT.UTF-8 UTF-8' >> /etc/locale.gen  && \
