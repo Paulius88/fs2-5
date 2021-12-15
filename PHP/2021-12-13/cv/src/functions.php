@@ -38,3 +38,35 @@ if (!function_exists('asset')) {
 		return $asset;
 	}
 }
+
+if (!function_exists('ajaxResponse')) {
+	function ajaxResponse($data = NULL, bool $status = TRUE, string $message = NULL,  int $httpResponseCode = 200)
+	{
+		$data = [
+			'data'    => $data,
+
+			'status'  => $status,
+			'message' => $message,
+		];
+
+		header('Content-type: application/json');
+
+		http_response_code($httpResponseCode);
+
+		echo json_encode($data);
+
+		exit;
+	}
+}
+
+if (!function_exists('generateRandomString')) {
+	function generateRandomString($length = 10) {
+	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    $charactersLength = strlen($characters);
+	    $randomString = '';
+	    for ($i = 0; $i < $length; $i++) {
+	        $randomString .= $characters[rand(0, $charactersLength - 1)];
+	    }
+	    return $randomString;
+	}
+}

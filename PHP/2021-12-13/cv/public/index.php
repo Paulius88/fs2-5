@@ -29,16 +29,33 @@ try {
 	require_once ROOT_PATH . '/src/app.php';
 
 	ob_end_flush();
-} catch (Exception $e) {
+} catch (Exception $e) { // ToDo: improve
 	ob_end_clean();
 
 	$code = $e->getCode();
 	$message = $e->getMessage();
 
+	$isXMLHttpRequest = $_SERVER['HTTP_X_REQUESTED_WITH'];
+	$isXMLHttpRequest = !empty($isXMLHttpRequest) && strtolower($isXMLHttpRequest) == 'xmlhttprequest';
+
+	if (!empty($requestedWith) && strtolower($requestedWith) == 'xmlhttprequest') {
+		ajaxResponse($errors, FALSE, $e->getMessage(), $e->getCode());
+	}
+
+	// ToDo: improve
 	if ($code == 404) {
-		http_response_code(404);
+		if ($isXMLHttpRequest) {
+			ajaxResponse($errors, FALSE, $e->getMessage(), 404);
+		} else {
+			http_response_code(404);
+		}
 	} else {
-		echo "Error: {$e->getMessage()}";
+		if ($isXMLHttpRequest) {
+			ajaxResponse($errors, FALSE, $e->getMessage(), 500);
+		} else {
+			http_response_code(500);
+			echo "Error: {$e->getMessage()}";
+		}
 	}
 
 	exit;
