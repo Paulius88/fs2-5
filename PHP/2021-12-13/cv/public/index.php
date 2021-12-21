@@ -1,4 +1,5 @@
 <?php
+
 define('ROOT_PATH', dirname(__DIR__));
 
 ini_set('error_reporting', E_ALL);
