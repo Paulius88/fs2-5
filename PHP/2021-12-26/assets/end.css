@@ -1,0 +1,11 @@
+.url {
+    background-color: #b3ffff;
+}
+
+.copy-button {
+    border-radius: 0;
+}
+
+.copy-button:focus {
+    box-shadow: none !important;
+}
